@@ -1,0 +1,9 @@
+<h1>Time for Game Stonks!</h1>
+
+<ul>
+    <% @stocks.each do |stock| %>
+       <li>
+         <%= link_to stock.name, stock %>
+        </li>
+    <% end %>
+</ul>
