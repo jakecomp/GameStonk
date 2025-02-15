@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   
   #resources :stocks
   resources :registrations, only: [:new, :create]
-  resources :session, only: [:new, :create, :destroy]
-  resources :password_reset
+  resources :sessions, only: [:new, :create, :destroy]
+  resources :password_resets, only: [:new, :create, :edit, :update], param: :token
   resources :passwords, only: [:edit, :update]
 
   root "main#index"

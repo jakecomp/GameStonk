@@ -1,6 +1,5 @@
 class SessionsController < ApplicationController
   def new
-    
   end
 
   def create
@@ -12,6 +11,7 @@ class SessionsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+
   def destroy
     logout current_user
     redirect_to root_path, notice: "You have been logged out."
